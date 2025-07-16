@@ -24,8 +24,6 @@ header, footer{
 
 	border: 2px solid var(--foreground);
 	padding: 3px 5px;
-
-	font-family: Monospace;
 }
 header{
 	border-style: none none solid none;
