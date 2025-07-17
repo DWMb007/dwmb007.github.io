@@ -1,33 +1,38 @@
+/* Variables */
 :root{
-	--background: #101010;
-	--foreground: #dcdcdc;
-	--link-color: #81e07d;
+	--background: #000000;
+	--foreground: #00bf00;
+	--text-color: #dcdcdc;
+
+	--link-color: #00bf00;
+	--link-hover: #00d300;
+	--link-activ: #00ab00;
 }
 
+/* Main Elements (Containers) */
 body{
-	padding: 0;
-	margin: 0;
-
 	background: var(--background);
-	color: var(--foreground);
+	color: var(--text-color);
 
-	font-family: Arial;
+	font-family: Helvetica;
 	font-size: 20px;
 
-	image-rendering: pixelated;
+	padding: 0;
+	margin: 0;
 }
-
 
 header, footer{
 	display: flex;
 	justify-content: space-between;
 
 	border: 2px solid var(--foreground);
-	padding: 3px 5px;
+
+	font-weight: 600;
+
+	padding: 4px 7px;
 }
 header{
 	border-style: none none solid none;
-	& #logo{ color: #e0d07d; }
 }
 footer{
 	border-style: solid none none none;
@@ -39,12 +44,13 @@ main{
 }
 
 
-.navbar{
+/* Elements */
+nav{
 	& a{
 		&:before{content: "["}
 		&:after{content: "]"}
 		& img{
-			margin-right: 2px;
+			margin: 0 2px;
 			height: 16px; width: 16px;
 			vertical-align: middle;
 		}
@@ -54,6 +60,10 @@ a{
 	&:hover{
 		text-decoration: underline dotted;
 		text-decoration-thickness: 2px;
+		color: var(--link-hover);
+	}
+	&:active{
+		color: var(--link-activ);
 	}
 	text-decoration: none;
 	color: var(--link-color);
